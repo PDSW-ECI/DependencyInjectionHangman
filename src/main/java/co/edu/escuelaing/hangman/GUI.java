@@ -31,6 +31,7 @@ public class GUI {
     public static final String CREDITS_KEY = "creditsscreen";
     public static final String GAME_KEY = "gamescreen";
     public static final String GAME_OVER_KEY = "gameoverscreen";
+    private final GameScore gameScore;
 
     private Language language;
     private HangmanDictionary dictionary;
@@ -50,6 +51,7 @@ public class GUI {
         this.language = factoryMethod.createLanguage();
         this.dictionary = factoryMethod.createDictionary();
         this.hangmanPanel = factoryMethod.createHangmanPanel();
+        this.gameScore = factoryMethod.createGameScore();
     }
 
     /* Example of second constructor
@@ -85,7 +87,7 @@ public class GUI {
                 mainFrameController
         );
 
-        GameModel gameModel = new GameModel(dictionary);
+        GameModel gameModel = new GameModel(dictionary, gameScore);
         gameController = new GameController(
                 new GamePanel(gameModel.getCharacterSet(), hangmanPanel, language),
                 gameModel,
