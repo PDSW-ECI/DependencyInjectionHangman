@@ -6,10 +6,7 @@ import java.util.ArrayList;
 
 @Component("bonusScore")
 public class BonusScore implements GameScore{
-    /*
-    * @param correctCount
-    * @param incorrectCount
-    * */
+
     private int initialScore = 0;
     private int incorrect = 0;
     private int correct = 0;
