@@ -19,6 +19,7 @@ public class BonusScore implements GameScore{
     public int calculateScore(int correctCount, int incorrectCount)
     {
         if(incorrect >= incorrectCount){
+            if(correctCount == 0){correct = 0; initialScore = 0;};
             if(correctCount - correct == 1){
                 initialScore += 10;
             }
