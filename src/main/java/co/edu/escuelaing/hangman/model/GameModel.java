@@ -81,10 +81,10 @@ public class GameModel {
         }
         if (positions.size() == 0) {
             incorrectCount++;
-            gameScorePoints = gameScore.calculateScore(correctCount, incorrectCount);
         } else {
             correctCount += positions.size();
         }
+        gameScorePoints = gameScore.calculateScore(correctCount, incorrectCount);
         return positions;
     }
 
