@@ -23,10 +23,11 @@ import java.util.Scanner;
 
 
 public class GameModel {
+    private final GameScore gameScore;
     private int incorrectCount;
     private int correctCount;
     private LocalDateTime dateTime;
-    private int gameScore;
+    private int gameScorePoints;
     private int[] lettersUsed;
 
 
@@ -36,14 +37,16 @@ public class GameModel {
     private String randomWord;
     private char[] randomWordCharArray;
 
-    public GameModel(HangmanDictionary dictionary) {
-        //this.dictionary = new EnglishDictionaryDataSource();
+
+    @Autowired
+    public GameModel(HangmanDictionary dictionary, GameScore gameScore) {
         this.dictionary = dictionary;
+        this.gameScore = gameScore;
         randomWord = selectRandomWord();
         randomWordCharArray = randomWord.toCharArray();
         incorrectCount = 0;
         correctCount = 0;
-        gameScore = 100;
+        gameScorePoints = gameScore.calculateScore(correctCount, incorrectCount);
 
     }
 
@@ -54,7 +57,7 @@ public class GameModel {
         randomWordCharArray = randomWord.toCharArray();
         incorrectCount = 0;
         correctCount = 0;
-        gameScore = 100;
+        gameScorePoints = gameScore.calculateScore(correctCount, incorrectCount);
     }
 
     //setDateTime
@@ -76,12 +79,11 @@ public class GameModel {
         }
         if (positions.size() == 0) {
             incorrectCount++;
-            gameScore -= 10;
         } else {
             correctCount += positions.size();
         }
+        gameScorePoints = gameScore.calculateScore(correctCount, incorrectCount);
         return positions;
-
     }
 
     //getDateTime
@@ -94,14 +96,18 @@ public class GameModel {
     //getScore
     //purpose: returns current score value
     public int getScore() {
-        return gameScore;
+        return gameScorePoints;
     }
 
     //setScore
     //purpose: sets score value to points
     public void setScore(int score) {
-        this.gameScore = score;
+        this.gameScorePoints = score;
     }
+
+    public void changeWord(String newWord){randomWord = newWord;randomWordCharArray = randomWord.toCharArray();}
+
+    public String getRandomWord(){return randomWord;}
 
     //name: selectRandomWord()
     //purpose: selects random word from dictionary
@@ -126,13 +132,13 @@ public class GameModel {
     //method: getGameScore
     //purpose: return current score
     public int getGameScore() {
-        return gameScore;
+        return gameScorePoints;
     }
 
     //method: setGameScore
     //purpose: set current game score
     public void setGameScore(int gameScore) {
-        this.gameScore = gameScore;
+        this.gameScorePoints = gameScore;
     }
 
     //method: getWordLength
