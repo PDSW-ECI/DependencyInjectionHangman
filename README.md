@@ -101,6 +101,13 @@ constructor de la clase GUI y HangmanFactoryMethod).
 
 1. Utilizando el HangmanFactoryMethod (MétodoFabrica) incluya el
    OriginalScore a la configuración.
-
+   En la siguiente imagen se muestra dentro de la clase HangmanDefaultFactoryMethod que esta configurado con originalScore como el modo de juego actual.
+![image](https://github.com/Knight072/DependencyInjectionHangman/assets/116401447/c0741799-e887-4fe6-a56c-c5a11cf3dc21)
+   Se puede ver que al momento de correr el juego este inicia el juego en 100 y después de haber fallado una vez queda el puntaje en 90
+   ![image](https://github.com/Knight072/DependencyInjectionHangman/assets/116401447/196fef5b-21e3-424e-b82b-b0c428a50149)
+   Ahora vamos a configurar el juego como bonusScore
 ![image](https://github.com/Knight072/DependencyInjectionHangman/assets/116401447/f4d43f20-53a7-486a-a125-db9e9ce5345f)
+   Después de jugar un rato vemos que el puntaje se redujo 5 puntos por cada palabra incorrecta e incremento 10 por cada acierto.
+   ![image](https://github.com/Knight072/DependencyInjectionHangman/assets/116401447/18fc6ebc-a023-4bef-91bf-da1cce07039d)
+
 
