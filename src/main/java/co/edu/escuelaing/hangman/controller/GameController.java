@@ -17,7 +17,6 @@ import co.edu.escuelaing.hangman.GUI;
 import co.edu.escuelaing.hangman.model.GameModel;
 import co.edu.escuelaing.hangman.model.Language;
 import co.edu.escuelaing.hangman.view.GamePanel;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.swing.*;
 import javax.swing.event.AncestorEvent;
@@ -33,7 +32,6 @@ public class GameController {
 
     private Language lan;
 
-    @Autowired
     public GameController(GamePanel panel, GameModel model, MainFrameController rootController, Language lan) {
         this.lan = lan;
         this.panel = (GamePanel) panel;

@@ -13,7 +13,6 @@
 package co.edu.escuelaing.hangman.model;
 
 import co.edu.escuelaing.hangman.model.dictionary.HangmanDictionary;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
