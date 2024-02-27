@@ -102,11 +102,5 @@ constructor de la clase GUI y HangmanFactoryMethod).
 1. Utilizando el HangmanFactoryMethod (MétodoFabrica) incluya el
    OriginalScore a la configuración.
 
-* Mediante la configuración de la Inyección de
-  Dependencias se pueda cambiar el comportamiento del mismo, por
-  ejemplo:
-    * Utilizar el esquema OriginalScore.
-    * Utilizar el esquema BonusScore.
-    * Utilizar el idioma francés.
-    * Utilizar el diccionario francés.
-    * etc...
+![image](https://github.com/Knight072/DependencyInjectionHangman/assets/116401447/f4d43f20-53a7-486a-a125-db9e9ce5345f)
+
