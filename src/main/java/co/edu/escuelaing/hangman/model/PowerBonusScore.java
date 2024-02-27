@@ -2,7 +2,7 @@ package co.edu.escuelaing.hangman.model;
 
 import org.springframework.stereotype.Component;
 
-@Component("PowerBonusScore")
+@Component("powerBonusScore")
 public class PowerBonusScore implements GameScore{
     private int initialScore;
     private int incorrect = 0;

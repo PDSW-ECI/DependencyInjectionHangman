@@ -41,7 +41,6 @@ public class GameModel {
 
     @Autowired
     public GameModel(HangmanDictionary dictionary, GameScore gameScore) {
-        //this.dictionary = new EnglishDictionaryDataSource();
         this.dictionary = dictionary;
         this.gameScore = gameScore;
         randomWord = selectRandomWord();
@@ -106,6 +105,10 @@ public class GameModel {
     public void setScore(int score) {
         this.gameScorePoints = score;
     }
+
+    public void changeWord(String newWord){randomWord = newWord;randomWordCharArray = randomWord.toCharArray();}
+
+    public String getRandomWord(){return randomWord;}
 
     //name: selectRandomWord()
     //purpose: selects random word from dictionary
