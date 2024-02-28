@@ -4,8 +4,6 @@
 
 ### Desarrollo Dirigido por Pruebas + DIP + DI
 
-Para este taller se va a trabajar sobre el juego del ahorcado.
-
 El sistema actual de puntuación del juego comienza en 100 puntos y va
 descontando 10 puntos cada vez que se propone una letra incorrecta.
 
@@ -39,12 +37,6 @@ puntuación, los cuales se describen a continuación:
         500.
 
   ![image](https://github.com/Knight072/DependencyInjectionHangman/assets/116401447/c65fdd78-3d07-44bc-ab59-835b53e403ad)
-
-
-Lo anterior, se traduce en el siguiente modelo, donde se aplica el
-principio de inversión de dependencias:
-
-![imagen](img/model.png)
 
 ### Parte I
 
