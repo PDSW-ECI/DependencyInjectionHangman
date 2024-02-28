@@ -10,7 +10,7 @@ public class PowerBonusScore implements GameScore{
     public int calculateScore(int correctCount, int incorrectCount) {
         if(correctCount == 0){initialScore = 0;};
         if(incorrect >= incorrectCount){
-            if(correctCount != 0){ initialScore += Math.pow(5,correctCount);};
+            if(correctCount != 0){ initialScore += (int) Math.pow(5,correctCount);};
 
         }
         else{

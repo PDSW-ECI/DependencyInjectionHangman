@@ -1,8 +1,6 @@
 package co.edu.escuelaing.hangman;
 
-import co.edu.escuelaing.hangman.model.GameModel;
-import co.edu.escuelaing.hangman.model.GameScore;
-import co.edu.escuelaing.hangman.model.OriginalScore;
+import co.edu.escuelaing.hangman.model.*;
 import co.edu.escuelaing.hangman.model.dictionary.EnglishDictionaryDataSource;
 import co.edu.escuelaing.hangman.model.dictionary.HangmanDictionary;
 import org.junit.Assert;
@@ -27,4 +25,43 @@ public class GameScoreTest {
         gameModel.makeGuess("L");
         Assert.assertEquals(gameModel.getScore(), 100);
     }
+    @Test
+    public void testBonusScorePoints(){
+        dictionary = new EnglishDictionaryDataSource();
+        gameScore = new BonusScore();
+        GameModel gameModel = new GameModel(dictionary, gameScore);
+        gameModel.changeWord("SAPO");
+        gameModel.makeGuess("S");
+        gameModel.makeGuess("A");
+        gameModel.makeGuess("P");
+        gameModel.makeGuess("Q");
+        gameModel.makeGuess("O");
+        Assert.assertEquals(gameModel.getScore(), 35);
+    }
+    @Test
+    public void testPowerBonusScorePointsPast500(){
+        dictionary = new EnglishDictionaryDataSource();
+        gameScore = new PowerBonusScore();
+        GameModel gameModel = new GameModel(dictionary, gameScore);
+        gameModel.changeWord("SAPO");
+        gameModel.makeGuess("S");
+        gameModel.makeGuess("A");
+        gameModel.makeGuess("P");
+        gameModel.makeGuess("Q");
+        gameModel.makeGuess("O");
+        Assert.assertEquals(gameModel.getScore(), 500);
+    }
+
+    @Test
+    public void testPowerBonusScorePointsOver500(){
+        dictionary = new EnglishDictionaryDataSource();
+        gameScore = new PowerBonusScore();
+        GameModel gameModel = new GameModel(dictionary, gameScore);
+        gameModel.changeWord("NO");
+        gameModel.makeGuess("N");
+        gameModel.makeGuess("I");
+        gameModel.makeGuess("O");
+        Assert.assertEquals(gameModel.getScore(), 22);
+    }
+
 }
