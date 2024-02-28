@@ -59,8 +59,15 @@ puntuación, los cuales se describen a continuación:
     git add .			
     git commit -m "especificación métodos"
     ```
+   
+   ![image](https://github.com/Knight072/DependencyInjectionHangman/assets/116401447/0382f902-0645-48bd-907e-25f32c352681)
+
+    
 
 6. Actualice el archivo `pom.xml` e incluya las dependencias para la ultima versión de JUnit.
+
+![image](https://github.com/Knight072/DependencyInjectionHangman/assets/116401447/1d874d1e-f054-4a9a-b9c0-f501f15e0e85)
+
 
 7. Teniendo en cuenta dichas especificaciones, en la clase donde se
    implementarán las pruebas (GameScoreTest), en los
@@ -68,28 +75,28 @@ puntuación, los cuales se describen a continuación:
    las tres variantes de GameScore, e identifique
    condiciones de frontera.
 
-8. Para cada clase de equivalencia y condición de frontera, implemente
+9. Para cada clase de equivalencia y condición de frontera, implemente
    una prueba utilizando JUnit.
 
-9. Haga commit de lo realizado hasta ahora. Desde la terminal:
+10. Haga commit de lo realizado hasta ahora. Desde la terminal:
 
     ```sh		
     git add .			
     git commit -m "implementación pruebas"
     ```
 
-10. Realice la implementación de los 'cascarones' realizados anteriormente.
+11. Realice la implementación de los 'cascarones' realizados anteriormente.
    Asegúrese que todas las pruebas unitarias creadas en los puntos anteriores
    se ejecutan satisfactoriamente.
 
-11. Al finalizar haga un nuevo commit:
+12. Al finalizar haga un nuevo commit:
 
     ```sh		
     git add .			
     git commit -m "implementación del modelo"
     ```
 
-12. Para sincronizar el avance en el respositorio y NO PERDER el trabajo, use
+13. Para sincronizar el avance en el respositorio y NO PERDER el trabajo, use
     el comando de GIT para enviar los cambios:
 
     ```sh
