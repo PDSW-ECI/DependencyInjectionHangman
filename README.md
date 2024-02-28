@@ -69,39 +69,17 @@ puntuación, los cuales se describen a continuación:
 ![image](https://github.com/Knight072/DependencyInjectionHangman/assets/116401447/1d874d1e-f054-4a9a-b9c0-f501f15e0e85)
 
 
-7. Teniendo en cuenta dichas especificaciones, en la clase donde se
-   implementarán las pruebas (GameScoreTest), en los
-   comentarios iniciales, especifique las clases de equivalencia para
-   las tres variantes de GameScore, e identifique
-   condiciones de frontera.
-
-9. Para cada clase de equivalencia y condición de frontera, implemente
+7. Para cada clase de equivalencia y condición de frontera, implemente
    una prueba utilizando JUnit.
 
-10. Haga commit de lo realizado hasta ahora. Desde la terminal:
+![image](https://github.com/Knight072/DependencyInjectionHangman/assets/116401447/0aa0fe64-d8f1-4682-a07d-75d74bb11063)
 
-    ```sh		
-    git add .			
-    git commit -m "implementación pruebas"
-    ```
+![image](https://github.com/Knight072/DependencyInjectionHangman/assets/116401447/a173b6d6-7ef0-439c-8152-8dd791d0b83e)
 
-11. Realice la implementación de los 'cascarones' realizados anteriormente.
-   Asegúrese que todas las pruebas unitarias creadas en los puntos anteriores
-   se ejecutan satisfactoriamente.
+![image](https://github.com/Knight072/DependencyInjectionHangman/assets/116401447/9fbc8015-5b58-4f8f-bd3b-b8056e3e0893)
 
-12. Al finalizar haga un nuevo commit:
+![image](https://github.com/Knight072/DependencyInjectionHangman/assets/116401447/eccba811-ee60-4067-9376-f006255a7aa7)
 
-    ```sh		
-    git add .			
-    git commit -m "implementación del modelo"
-    ```
-
-13. Para sincronizar el avance en el respositorio y NO PERDER el trabajo, use
-    el comando de GIT para enviar los cambios:
-
-    ```sh
-    git push origin main
-    ```
 
 ### Parte II
 
