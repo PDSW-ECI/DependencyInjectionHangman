@@ -3,6 +3,7 @@ package co.edu.escuelaing.hangman;
 import co.edu.escuelaing.hangman.model.*;
 import co.edu.escuelaing.hangman.model.dictionary.EnglishDictionaryDataSource;
 import co.edu.escuelaing.hangman.model.dictionary.HangmanDictionary;
+import co.edu.escuelaing.hangman.model.dictionary.SpanishDictionaryDataSource;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -52,7 +53,7 @@ public class GameScoreTest {
 
     @Test
     public void testPowerBonusScorePointsOver500(){
-        dictionary = new EnglishDictionaryDataSource();
+        dictionary = new SpanishDictionaryDataSource();
         gameScore = new PowerBonusScore();
         GameModel gameModel = new GameModel(dictionary, gameScore);
         gameModel.changeWord("NO");
