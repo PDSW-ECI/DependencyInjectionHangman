@@ -2,16 +2,11 @@ package co.edu.escuelaing.hangman.model;
 
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
-
 @Component("bonusScore")
 public class BonusScore implements GameScore{
-
     private int initialScore = 0;
     private int incorrect = 0;
     private int correct = 0;
-
-
     @Override
     public int calculateScore(int correctCount, int incorrectCount)
     {
@@ -32,5 +27,4 @@ public class BonusScore implements GameScore{
         }
         return initialScore;
     }
-
 }

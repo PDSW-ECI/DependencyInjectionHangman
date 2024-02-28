@@ -1,5 +1,6 @@
 package co.edu.escuelaing.hangman.setup.factoryMethod;
 
+
 import co.edu.escuelaing.hangman.model.GameScore;
 import co.edu.escuelaing.hangman.model.Language;
 import co.edu.escuelaing.hangman.model.dictionary.HangmanDictionary;

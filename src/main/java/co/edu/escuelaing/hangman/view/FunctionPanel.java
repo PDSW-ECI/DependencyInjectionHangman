@@ -12,7 +12,6 @@
 package co.edu.escuelaing.hangman.view;
 
 import co.edu.escuelaing.hangman.model.Language;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.swing.*;
 import javax.swing.border.BevelBorder;
@@ -34,8 +33,6 @@ public class FunctionPanel extends JPanel {
     private int currentSize; //1 for large, 2 for medium, 3 for small
     private JLabel imageLabel;
 
-
-    @Autowired
     public FunctionPanel(Language lan) {
         this.lan = lan;
         try {
