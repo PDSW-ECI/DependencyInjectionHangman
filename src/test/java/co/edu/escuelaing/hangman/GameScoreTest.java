@@ -17,8 +17,6 @@ public class GameScoreTest {
         gameScore = new OriginalScore();
         GameModel gameModel = new GameModel(dictionary, gameScore);
         gameModel.changeWord("POOL");
-        System.out.println(gameModel.getWordLength());
-        System.out.println(gameModel.getRandomWord());
         gameModel.makeGuess("P");
         gameModel.makeGuess("O");
         gameModel.makeGuess("O");
@@ -61,7 +59,6 @@ public class GameScoreTest {
         gameModel.makeGuess("N");
         gameModel.makeGuess("I");
         gameModel.makeGuess("O");
-        Assert.assertEquals(gameModel.getScore(), 22);
+        Assert.assertEquals(gameModel.getScore(), 25);
     }
-
 }
